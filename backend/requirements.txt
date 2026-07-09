@@ -1,0 +1,21 @@
+# --- Web framework ---
+fastapi>=0.115.6
+uvicorn[standard]>=0.34.0
+
+# --- Data / ORM ---
+SQLAlchemy>=2.0.36
+# pydantic >=2.12 ships prebuilt wheels for Python 3.14 (no Rust toolchain needed)
+pydantic>=2.12
+pydantic-settings>=2.7.0
+python-dotenv>=1.0.1
+
+# --- LangGraph AI Agent + Groq LLM ---
+langgraph>=0.2.60,<0.3
+langchain>=0.3.14,<0.4
+langchain-core>=0.3.29,<0.4
+langchain-groq>=0.2.3,<0.4
+
+# --- Database driver (SQLite ships with Python; default DB works out of the box) ---
+# For PostgreSQL (recommended per assignment) also install:
+#   pip install "psycopg[binary]>=3.2"
+# and set DATABASE_URL=postgresql+psycopg://user:pass@localhost:5432/hcp_crm
